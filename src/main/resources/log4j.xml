@@ -11,7 +11,7 @@
 		</layout>
 	</appender>
 
-	<appender name="global-log" class="org.apache.log4j.RollingFileAppender">
+	<!-- <appender name="global-log" class="org.apache.log4j.RollingFileAppender">
 		<param name="maxFileSize" value="2000KB" />
 		<param name="MaxBackupIndex" value="10" />
 		<param name="File" value="${catalina.home}/logs/app-msg.log" />
@@ -31,11 +31,11 @@
 			<param name="ConversionPattern"
 				value="[%d{dd MMM yyyy HH:mm:ss.SSS}][%5p] %t (%c:%L) - %m%n" />
 		</layout>
-	</appender>
+	</appender> -->
 
 	<!-- Application Loggers -->
 	<logger name="fr.treeptik">
-		<level value="${logger.level}" />
+		<level value="debug" />
 	</logger>
 
 	<!-- 3rdparty Loggers -->
@@ -59,7 +59,7 @@
 		<level value="info" />
 	</logger>
 	<logger name="org.hibernate.SQL">
-		<level value="${logger.level}" />
+		<level value="debug" />
 	</logger>
 
 	<logger name="org.springframework.security">
@@ -71,8 +71,8 @@
 
 		<priority value="warn" />
 		<appender-ref ref="console" />
-		<appender-ref ref="global-log" />
-		<appender-ref ref="errors-log" />
+<!-- 		<appender-ref ref="global-log" />
+		<appender-ref ref="errors-log" /> -->
 
 	</root>
 

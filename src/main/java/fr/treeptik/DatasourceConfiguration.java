@@ -30,7 +30,7 @@ public class DatasourceConfiguration {
 		Driver driver = new Driver();
 		driver.acceptsURL("com.mysql.jdbc.Driver");
 		config.setDriver(driver);
-		config.setUrl("jdbc:mysql://localhost:3306/jpasample");
+		config.setUrl("jdbc:mysql://localhost:3306/confSpringFJ");
 		config.setUsername("root");
 		config.setPassword("root");
 		return config;
@@ -67,9 +67,9 @@ public class DatasourceConfiguration {
 		return jpaVendorAdapter;
 	}
 
-	@Bean
-	public HibernateExceptionTranslator hibernateExceptionTranslator() {
-		return new HibernateExceptionTranslator();
-	}
+//	@Bean
+//	public HibernateExceptionTranslator hibernateExceptionTranslator() {
+//		return new HibernateExceptionTranslator();
+//	}
 
 }
