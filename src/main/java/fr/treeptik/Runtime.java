@@ -4,6 +4,8 @@ import org.apache.log4j.Logger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import fr.treeptik.conf.DatasourceConfiguration;
+
 public class Runtime {
 
 	private static Logger logger = Logger.getLogger(Runtime.class);

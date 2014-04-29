@@ -1,4 +1,4 @@
-package fr.treeptik;
+package fr.treeptik.conf;
 
 import java.sql.SQLException;
 
@@ -8,6 +8,7 @@ import javax.sql.DataSource;
 import org.hibernate.ejb.HibernatePersistence;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.SimpleDriverDataSource;
 import org.springframework.orm.hibernate4.HibernateExceptionTranslator;
 import org.springframework.orm.jpa.JpaTransactionManager;
@@ -22,6 +23,7 @@ import com.mysql.jdbc.Driver;
 
 @Configuration
 @EnableTransactionManagement
+@EnableJpaRepositories(value="fr.treeptik.conf.dao")
 public class DatasourceConfiguration {
 
 	@Bean
